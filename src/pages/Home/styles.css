@@ -17,13 +17,21 @@
     margin-top: 40px;
     color: #ffffff;
 }
+
+@media screen and (max-width: 568px) { 
+    .information {
+        width: 90%;
+        margin: auto;
+        margin-top: 40px;
+        color: #ffffff;
+    }
+}
 .search {
     display: flex;
     align-items: center;
-    gap: 8px;
     position: sticky;
     top: 92px;
-    z-index: 100;
+    z-index: 100;    
 }
 
 .repository {
