@@ -1,0 +1,34 @@
+.content {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.background {
+    height: 80vh;
+    position: fixed;
+    left: 0;
+}
+
+.information {
+    width: 60%;
+    margin-right: 90px;
+    margin-top: 40px;
+    color: #ffffff;
+}
+.search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: sticky;
+    top: 92px;
+    z-index: 100;
+}
+
+.repository {
+    margin: 12px 0;
+    font-size: 32px;
+    color: #ffffff;
+    text-align: center;
+}

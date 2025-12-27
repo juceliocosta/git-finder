@@ -1,0 +1,34 @@
+name: Deploy gh-page Branch
+permissions:
+  contents: write
+# Run workflow on every push to the master branch
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy-to-github-pages:
+    # use ubuntu-latest image to run steps on
+    runs-on: ubuntu-latest
+    steps:
+    # uses GitHub's checkout action to checkout code form the master branch
+    - uses: actions/checkout@v4
+      
+    # sets up node
+    - name: Setup node
+      uses: actions/setup-node@v4
+
+    # Installs required npm packages
+    - name: Installs required npm dependencies
+      run: npm install
+
+    # Generate npm build
+    - name: Generates npm build
+      run: npm run build
+
+    # Commit to gh-pages branch
+    - name: Commit wwwroot to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages
+        folder: build
