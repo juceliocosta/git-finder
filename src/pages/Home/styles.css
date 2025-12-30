@@ -29,9 +29,10 @@
 .search {
     display: flex;
     align-items: center;
+    justify-content: space-between; 
     position: sticky;
     top: 92px;
-    z-index: 100;    
+    z-index: 100;   
 }
 
 .repository {
@@ -39,4 +40,10 @@
     font-size: 32px;
     color: #ffffff;
     text-align: center;
+}
+
+.title-container {
+ display: flex;
+ align-items: start;
+ justify-content: space-between;
 }

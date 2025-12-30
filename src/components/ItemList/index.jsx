@@ -1,11 +1,13 @@
 import './styles.css';
 
-const ItemList = ({title, description}) => {
+const ItemList = ({id, title, description}) => {
   return (
-    <div className='item-list'>
+    <div className='container-list'>
+      <div className='item-list'>
         <strong>{title}</strong>
         <p>{description}</p>
-        <hr />
+      </div>
+      <hr />
     </div>
   );
 }
