@@ -1,10 +1,12 @@
 import './styles.css';
 
-const Button = ({ user, setCurrentUser, setRepos}) => {
+const ButtonSearch = ({ user, setCurrentUser, setRepos, setLayout}) => {
   const handleGetData = async () => {
+    setLayout('repositories');
+
     const userData = await fetch(`https://api.github.com/users/${user}`);
     const newUser = await userData.json();
-    if(newUser.name){
+    if(newUser.name){     
       const {avatar_url, name, bio, login} = newUser;
       setCurrentUser({avatar_url, name, bio, login});
 
@@ -23,4 +25,4 @@ const Button = ({ user, setCurrentUser, setRepos}) => {
   );
 }
 
-export default Button;
+export default ButtonSearch;

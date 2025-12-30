@@ -1,3 +1,6 @@
+.container-list {
+ width: 100%;
+}
 .item-list {
  margin: 24px 0;   
 }
