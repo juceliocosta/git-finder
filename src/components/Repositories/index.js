@@ -7,8 +7,8 @@ const Repositories = ({repos, favorites, setFavorites}) => {
     <div>
       <h4 className='repository'>Repositórios</h4>
       {repos.map((repo) => (
-        <div className='title-container'>
-          <ItemList id={repo.id} title={repo.name} description={repo.description} />
+        <div key={repo.id} className='title-container'>
+          <ItemList id={repo.id} title={repo.name} description={repo.description} url={repo.html_url} />
           <ButtonStar repo={repo} favorites={favorites} setFavorites={setFavorites} />
         </div>
       ))}

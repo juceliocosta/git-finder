@@ -1,10 +1,14 @@
 import './styles.css';
 
-const ItemList = ({id, title, description}) => {
+const ItemList = ({id, title, description, url}) => {
   return (
-    <div className='container-list'>
+    <div key={id} className='container-list'>
       <div className='item-list'>
-        <strong>{title}</strong>
+        <strong>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {title} ⤴
+          </a>
+        </strong>
         <p>{description}</p>
       </div>
       <hr />
