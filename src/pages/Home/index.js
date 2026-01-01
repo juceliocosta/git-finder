@@ -7,6 +7,7 @@ import Input from '../../components/Input';
 import ButtonSearch from '../../components/ButtonSearch';
 import Profile from '../../components/Profile';
 import Repositories from '../../components/Repositories';
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 
 
@@ -14,8 +15,8 @@ import Repositories from '../../components/Repositories';
 function App() {
   const [user, setUser] = useState('');
   const [currentUser, setCurrentUser] = useState(null);
-  const [repos, setRepos] = useState(null);
-  const [favorites, setFavorites] = useState([]);
+  const [repos, setRepos] = useLocalStorage('myApp:repos', null);
+  const [favorites, setFavorites] = useLocalStorage('myApp:favorites', []);
   const [layout, setLayout] = useState('repositories');
 
   return (
